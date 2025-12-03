@@ -1,0 +1,55 @@
+C:\Users\sharo\source\repos\Parcial_II\Parcial_II\bin\Debug\bd_academica.mdf
+C:\Users\sharo\source\repos\Parcial_II\Parcial_II\bin\Debug\bd_academica_log.ldf
+C:\Users\sharo\source\repos\Parcial_II\Parcial_II\bin\Debug\Parcial_II.exe.config
+C:\Users\sharo\source\repos\Parcial_II\Parcial_II\bin\Debug\Parcial_II.exe
+C:\Users\sharo\source\repos\Parcial_II\Parcial_II\bin\Debug\Parcial_II.pdb
+C:\Users\sharo\source\repos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.csproj.AssemblyReference.cache
+C:\Users\sharo\source\repos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.Form_usuario.resources
+C:\Users\sharo\source\repos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.Properties.Resources.resources
+C:\Users\sharo\source\repos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.csproj.GenerateResource.cache
+C:\Users\sharo\source\repos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.csproj.CoreCompileInputs.cache
+C:\Users\sharo\source\repos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.exe
+C:\Users\sharo\source\repos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.pdb
+C:\Users\sharo\source\repos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.Login.resources
+C:\Users\sharo\Videos\Parcial_II\Parcial_II\bin\Debug\bd_academica.mdf
+C:\Users\sharo\Videos\Parcial_II\Parcial_II\bin\Debug\bd_academica_log.ldf
+C:\Users\sharo\Videos\Parcial_II\Parcial_II\bin\Debug\Parcial_II.exe.config
+C:\Users\sharo\Videos\Parcial_II\Parcial_II\bin\Debug\Parcial_II.exe
+C:\Users\sharo\Videos\Parcial_II\Parcial_II\bin\Debug\Parcial_II.pdb
+C:\Users\sharo\Videos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.csproj.AssemblyReference.cache
+C:\Users\sharo\Videos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.Login.resources
+C:\Users\sharo\Videos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.Properties.Resources.resources
+C:\Users\sharo\Videos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.csproj.GenerateResource.cache
+C:\Users\sharo\Videos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.csproj.CoreCompileInputs.cache
+C:\Users\sharo\Videos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.exe
+C:\Users\sharo\Videos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.pdb
+C:\Users\sharo\Videos\Parcial_II\Parcial_II\obj\Debug\Parcial_II.frm_usuario.resources
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\bd_academica.mdf
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\bd_academica_log.ldf
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\Parcial_II.exe.config
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\Parcial_II.exe
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\Parcial_II.pdb
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.csproj.AssemblyReference.cache
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.frm_usuario.resources
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.Login.resources
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.Properties.Resources.resources
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.csproj.GenerateResource.cache
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.csproj.CoreCompileInputs.cache
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.exe
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.pdb
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\bd_login_ususario.mdf
+C:\Users\sharo\Videos\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\bd_login_ususario_log.ldf
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.csproj.AssemblyReference.cache
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.frm_usuario.resources
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.Properties.Resources.resources
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.csproj.GenerateResource.cache
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.csproj.CoreCompileInputs.cache
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.exe
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\obj\Debug\Parcial_II.pdb
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\bd_academica.mdf
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\bd_academica_log.ldf
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\bd_login_ususario.mdf
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\bd_login_ususario_log.ldf
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\Parcial_II.exe.config
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\Parcial_II.exe
+C:\Users\wacho\Downloads\Parcial_II (4)\Parcial_II\Parcial_II\bin\Debug\Parcial_II.pdb
