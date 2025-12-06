@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pacientes | Recepcionista</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #eef3f8;
+            font-family: 'Segoe UI';
+        }
+
+        h2 {
+            color: #0D5B8C;
+            font-weight: 700;
+        }
+
+        .table thead {
+            background: #0D5B8C;
+            color: white;
+        }
+
+        .btn-primary {
+            background: #0D5B8C;
+            border: none;
+        }
+
+        /* Botón X flotante */
+        #btnCerrarPanel {
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            background: white;
+            color: #0D5B8C;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0px 2px 6px rgba(0,0,0,.2);
+            z-index: 2000;
+        }
+
+            #btnCerrarPanel:hover {
+                background: #e6e6e6;
+            }
+    </style>
+</head>
+
+<body>
+
+    <!-- BOTÓN X PARA SALIR -->
+    <div id="btnCerrarPanel" onclick="window.location.href='recepcionista.html'">
+        <i class="bi bi-x-lg"></i>
+    </div>
+
+    <div class="container py-4">
+
+        <div class="d-flex justify-content-between mb-3">
+            <h2>Pacientes</h2>
+
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAgregar">
+                <i class="bi bi-plus-lg"></i> Nuevo Paciente
+            </button>
+        </div>
+
+        <div class="card p-3">
+            <input type="text" id="buscar" class="form-control mb-3" placeholder="Buscar...">
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Fecha Nac.</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaPacientes"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- MODAL AGREGAR -->
+    <div class="modal fade" id="modalAgregar" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header" style="background:#0D5B8C;color:white;">
+                    <h5 class="modal-title">Nuevo Paciente</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <label>Nombre</label>
+                    <input type="text" id="Nombre" class="form-control mb-2">
+
+                    <label>Teléfono</label>
+                    <input type="text" id="Telefono" class="form-control mb-2">
+
+                    <label>Correo</label>
+                    <input type="email" id="Correo" class="form-control mb-2">
+
+                    <label>Fecha Nacimiento</label>
+                    <input type="date" id="FechaNacimiento" class="form-control mb-2">
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-primary" onclick="guardarPaciente()">Guardar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL EDITAR -->
+    <div class="modal fade" id="modalEditar" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header" style="background:#0D5B8C;color:white;">
+                    <h5 class="modal-title">Editar Paciente</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <input type="hidden" id="editIdPaciente">
+
+                    <label>Nombre</label>
+                    <input type="text" id="editNombre" class="form-control mb-2">
+
+                    <label>Teléfono</label>
+                    <input type="text" id="editTelefono" class="form-control mb-2">
+
+                    <label>Correo</label>
+                    <input type="email" id="editCorreo" class="form-control mb-2">
+
+                    <label>Fecha Nacimiento</label>
+                    <input type="date" id="editFechaNacimiento" class="form-control mb-2">
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-primary" onclick="guardarEdicion()">Actualizar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const API = "/api/Paciente";
+
+        document.addEventListener("DOMContentLoaded", () => {
+            cargarPacientes();
+
+            // Buscador
+            document.getElementById("buscar").addEventListener("keyup", function () {
+                let texto = this.value.toLowerCase();
+                document.querySelectorAll("#tablaPacientes tr").forEach(fila => {
+                    fila.style.display = fila.innerText.toLowerCase().includes(texto) ? "" : "none";
+                });
+            });
+        });
+
+        // CARGAR
+        function cargarPacientes() {
+            fetch(API)
+                .then(r => r.json())
+                .then(data => {
+                    let html = "";
+                    data.forEach(p => {
+                        html += `
+                    <tr>
+                        <td>${p.idPaciente}</td>
+                        <td>${p.nombre}</td>
+                        <td>${p.telefono}</td>
+                        <td>${p.correo}</td>
+                        <td>${p.fechaNacimiento.split("T")[0]}</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm" onclick="abrirEditar(${p.idPaciente})"><i class="bi bi-pencil"></i></button>
+                            <button class="btn btn-danger btn-sm" onclick="eliminar(${p.idPaciente})"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                    `;
+                    });
+                    document.getElementById("tablaPacientes").innerHTML = html;
+                });
+        }
+
+        // CREAR
+        function guardarPaciente() {
+            let data = {
+                nombre: Nombre.value,
+                telefono: Telefono.value,
+                correo: Correo.value,
+                fechaNacimiento: FechaNacimiento.value
+            };
+
+            fetch(API, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            }).then(() => {
+                cargarPacientes();
+                bootstrap.Modal.getInstance(modalAgregar).hide();
+            });
+        }
+
+        // ABRIR EDITAR
+        function abrirEditar(id) {
+            fetch(API + "/" + id)
+                .then(r => r.json())
+                .then(p => {
+                    editIdPaciente.value = p.idPaciente;
+                    editNombre.value = p.nombre;
+                    editTelefono.value = p.telefono;
+                    editCorreo.value = p.correo;
+                    editFechaNacimiento.value = p.fechaNacimiento.split("T")[0];
+
+                    new bootstrap.Modal(modalEditar).show();
+                });
+        }
+
+        // GUARDAR EDICIÓN
+        function guardarEdicion() {
+            let id = editIdPaciente.value;
+
+            let data = {
+                idPaciente: parseInt(id),
+                nombre: editNombre.value,
+                telefono: editTelefono.value,
+                correo: editCorreo.value,
+                fechaNacimiento: editFechaNacimiento.value
+            };
+
+            fetch(API + "/" + id, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            })
+                .then(() => {
+                    cargarPacientes();
+                    bootstrap.Modal.getInstance(modalEditar).hide();
+                });
+        }
+
+        // ELIMINAR
+        function eliminar(id) {
+            if (!confirm("¿Eliminar este paciente?")) return;
+
+            fetch(API + "/" + id, { method: "DELETE" })
+                .then(() => cargarPacientes());
+        }
+    </script>
+
+</body>
+</html>

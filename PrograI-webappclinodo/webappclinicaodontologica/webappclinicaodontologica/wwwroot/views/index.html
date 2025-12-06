@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>SGCO CLÍNICA DENTAL – Inicio</title>
+
+    <style>
+        :root {
+            --azul-oscuro: #063970;
+            --azul-medio: #0D5B8C;
+            --celeste: #5FD3D4;
+            --blanco: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #E8F8FF, #DFF4FF, #F1FAFF);
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden;
+        }
+
+        /* LOGO GIGANTE SUAVE */
+        .logo-bg {
+            position: absolute;
+            width: 650px;
+            opacity: 0.08;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        /* TARJETA PRINCIPAL */
+        .card {
+            width: 420px;
+            padding: 40px;
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            z-index: 10;
+            animation: aparecer 0.8s ease;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card img {
+            width: 90px;
+            margin-bottom: 15px;
+        }
+
+        .titulo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--azul-medio);
+        }
+
+        .sub {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background: var(--celeste);
+            color: var(--azul-oscuro);
+            font-weight: bold;
+            padding: 12px 35px;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 6px 20px rgba(95,211,212,0.35);
+            transition: 0.2s ease;
+        }
+
+            .btn:hover {
+                background: var(--azul-medio);
+                color: white;
+            }
+    </style>
+</head>
+
+<body>
+
+    <!-- LOGO GIGANTE SUAVE DETRÁS -->
+    <img src="/img/logo dclinica.png" class="logo-bg">
+
+    <!-- TARJETA DE PRESENTACIÓN -->
+    <div class="card">
+        <img src="/img/logo dclinica.png" alt="Logo SGCO">
+
+        <div class="titulo">SGCO CLÍNICA DENTAL</div>
+        <div class="sub">Bienvenido al sistema de gestión clínica</div>
+
+        <button class="btn" onclick="window.location.href='login.html'">
+            INICIAR
+        </button>
+    </div>
+
+</body>
+</html>

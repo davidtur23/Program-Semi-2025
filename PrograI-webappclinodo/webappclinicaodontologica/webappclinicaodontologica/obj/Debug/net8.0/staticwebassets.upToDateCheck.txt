@@ -1,0 +1,21 @@
+wwwroot\img\logo dclinica.png
+wwwroot\img\servicios\84d3eb92-02cf-43c5-9249-05709ae38a89.jpg
+wwwroot\img\servicios\c43fe6dc-58d4-497e-bfeb-da353d8c0d21.jpg
+wwwroot\views\administrador.html
+wwwroot\views\citas_admin.html
+wwwroot\views\citas_doctor.html
+wwwroot\views\citas_recepcionista.html
+wwwroot\views\doctor.html
+wwwroot\views\empleados_admin.html
+wwwroot\views\historial_doctor.html
+wwwroot\views\index.html
+wwwroot\views\login.html
+wwwroot\views\pacientes_admin.html
+wwwroot\views\pacientes_doctor.html
+wwwroot\views\pacientes_recepcionista.html
+wwwroot\views\recepcionista.html
+wwwroot\views\reportes_recepcionista.html
+wwwroot\views\servicios_admin.html
+wwwroot\views\servicios_recepcionista.html
+wwwroot\views\tratamientos_doctor.html
+wwwroot\views\reporte_doctor.html
